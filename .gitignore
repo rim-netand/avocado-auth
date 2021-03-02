@@ -1,0 +1,9 @@
+# Project exclude paths
+/.gradle/
+/authorization-server/build/
+/authorization-server/out/
+/authorization-server/out/production/classes/
+/build/
+/commons/build/
+/commons/out/
+/commons/out/production/classes/

@@ -1,0 +1,35 @@
+#local, dev, prod 공통 설정
+application:
+  version: 1.0.0
+  title: Authorization
+
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: local
+
+--- #local 설정
+spring:
+  profiles: local
+
+  redis:
+    host: 211.253.10.9
+    port: 6379
+    database: 1
+    password: Netand141)
+    timeout: 3000
+
+  rabbitmq:
+    host: 211.253.10.9
+    port: 5672
+    username: admin
+    password: Netand141)
+
+token:
+  length: 40
+  expiredTime:                  # unit : Seconds
+    accessToken: 3600           # 60분
+    refreshToken: 432000        # 5일
+    authorizationCode: 300      # 5분
